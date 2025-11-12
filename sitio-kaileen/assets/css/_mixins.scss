@@ -1,0 +1,168 @@
+
+
+
+@mixin mixin-tarjeta-producto {
+  background: $color-blanco;
+  border-radius: 22px;
+  border: 1px solid $color-verde;
+  padding: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 350px;
+  margin: auto;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px; 
+  
+  &:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+
+  
+.producto-nombre {
+  font-weight: 700;
+  color: $color-negro;
+  margin-bottom: 0.3rem;
+}
+
+.producto-meta {
+  margin-top: .8rem;
+}
+
+.producto-precio {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: $color-negro;
+  margin-bottom: .4rem; 
+}
+
+.producto-descripcion {
+  color: $color-negro;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.btn-compartir {
+  background: none;
+  border: 0;
+  font-size: 1.3rem;
+  color: $color-negro;
+  transition: color 0.3s ease;
+}
+
+.btn-compartir:hover {
+  color: $color-negro;
+}
+}
+
+@mixin mixin-tarjeta-comunidad{
+  background: $color-blanco;
+  border-radius: 22px;
+  border: 2px solid $color-verde;
+  overflow: hidden;
+  max-width: 360px;
+  margin: 0 auto;
+
+  img{
+    width: 100%;
+    height: auto;
+    border-radius: 0 !important;
+    object-fit: cover;
+  }
+  .comunidad-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.4rem 0.4rem;
+  }
+  .comunidad-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $color-negro;
+}
+
+
+.comunidad-usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.comunidad-usuario img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comunidad-usuario span {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.comunidad-texto {
+  padding: 0 1.4rem;
+  font-size: 0.96rem;
+  color: $color-negro;
+  line-height: 1.45;
+}
+
+.comunidad-divisor {
+  border: none;
+  border-top: 1px solid $color-negro;
+  margin: 1.1rem 1.4rem;
+}
+
+.comunidad-input {
+  width: calc(100% - 2.8rem);
+  margin: 0 auto 1rem;
+  display: block;
+  padding: 0.8rem 1rem;
+  border-radius: 22px;
+  border: 2px solid $color-rosado;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.comentario {
+  display: flex;
+  gap: 12px;
+  padding: 10px 1.4rem;
+  margin-top: 0.2rem;
+}
+
+.comentario img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comentario p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: $color-negro;
+  line-height: 1.3;
+}
+
+
+}
+
+@mixin mixin-boton-verde {
+  background: $color-verde-chillon;
+  color: $color-negro;
+  font-weight: 700;
+  border-radius: 40px;
+  padding: .7rem 1.2rem;
+}

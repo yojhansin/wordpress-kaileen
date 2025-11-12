@@ -280,12 +280,10 @@ h3 + p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 280px;
 }
-
 .tarjeta-producto:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
-
 .tarjeta-producto img {
   width: 100%;
   height: auto;
@@ -293,40 +291,34 @@ h3 + p {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.producto-nombre {
+.tarjeta-producto .producto-nombre {
   font-weight: 700;
   color: #171D07;
   margin-bottom: 0.3rem;
 }
-
-.producto-meta {
+.tarjeta-producto .producto-meta {
   margin-top: 0.8rem;
 }
-
-.producto-precio {
+.tarjeta-producto .producto-precio {
   font-size: 1.1rem;
   font-weight: 800;
   color: #171D07;
   margin-bottom: 0.4rem;
 }
-
-.producto-descripcion {
+.tarjeta-producto .producto-descripcion {
   color: #171D07;
   font-size: 0.95rem;
   margin-bottom: 0;
   line-height: 1.4;
 }
-
-.btn-compartir {
+.tarjeta-producto .btn-compartir {
   background: none;
   border: 0;
   font-size: 1.3rem;
   color: #171D07;
   transition: color 0.3s ease;
 }
-
-.btn-compartir:hover {
+.tarjeta-producto .btn-compartir:hover {
   color: #171D07;
 }
 
@@ -350,64 +342,55 @@ h3 + p {
   max-width: 360px;
   margin: 0 auto;
 }
-
-.comunidad-imagen {
+.tarjeta-comunidad img {
   width: 100%;
   height: auto;
   border-radius: 0 !important;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.comunidad-header {
+.tarjeta-comunidad .comunidad-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 1.4rem 0.4rem;
 }
-
-.comunidad-header h3 {
+.tarjeta-comunidad .comunidad-header h3 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 700;
   color: #171D07;
 }
-
-.comunidad-usuario {
+.tarjeta-comunidad .comunidad-usuario {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 0 1.4rem;
   margin-bottom: 0.8rem;
 }
-
-.comunidad-usuario img {
+.tarjeta-comunidad .comunidad-usuario img {
   width: 38px;
   height: 38px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.comunidad-usuario span {
+.tarjeta-comunidad .comunidad-usuario span {
   font-size: 0.95rem;
   font-weight: 600;
 }
-
-.comunidad-texto {
+.tarjeta-comunidad .comunidad-texto {
   padding: 0 1.4rem;
   font-size: 0.96rem;
   color: #171D07;
   line-height: 1.45;
 }
-
-.comunidad-divisor {
+.tarjeta-comunidad .comunidad-divisor {
   border: none;
   border-top: 1px solid #171D07;
   margin: 1.1rem 1.4rem;
 }
-
-.comunidad-input {
+.tarjeta-comunidad .comunidad-input {
   width: calc(100% - 2.8rem);
   margin: 0 auto 1rem;
   display: block;
@@ -417,23 +400,20 @@ h3 + p {
   outline: none;
   font-size: 0.95rem;
 }
-
-.comentario {
+.tarjeta-comunidad .comentario {
   display: flex;
   gap: 12px;
   padding: 10px 1.4rem;
   margin-top: 0.2rem;
 }
-
-.comentario img {
+.tarjeta-comunidad .comentario img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.comentario p {
+.tarjeta-comunidad .comentario p {
   margin: 0;
   font-size: 0.95rem;
   color: #171D07;
