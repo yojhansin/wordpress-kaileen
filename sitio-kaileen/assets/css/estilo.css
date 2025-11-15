@@ -1,18 +1,53 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600&display=swap");
+h1, h2, h3, p {
+  line-height: 150%;
+}
+
+h1, h2, h3 {
+  font-family: "Syne", sans-serif;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
+h2, h3 {
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.p-grande {
+  font-size: 20px;
+}
+
+.p-mediano {
+  font-size: 16px;
+}
+
+.p-pequeno {
+  font-size: 12px;
+}
+
 body {
   background-color: #F2F0E4;
-  font-family: "Syne", sans-serif;
 }
 
 /* =========================================================
     TÍTULOS GENERALES Y TEXTOS SECUNDARIOS
 ========================================================= */
 h2 {
-  font-family: "Syne", sans-serif;
-  font-weight: 600; /* Semibold o eso se supone */
-  font-size: 30px;
-  line-height: 1.2;
   color: #171D07;
   margin-bottom: 0.5rem;
 }
@@ -20,24 +55,8 @@ h2 {
 h2 + p,
 h2 + div,
 h2 + span {
-  font-family: "Syne", sans-serif;
-  font-weight: 500; /* Medium */
-  font-size: 26px;
-  line-height: 1.4;
   color: #171D07;
   margin-top: 0.5rem;
-}
-
-h3 {
-  font-family: "Syne", sans-serif;
-  font-weight: 600; /* Semibold */
-  font-size: 20px;
-}
-
-h3 + p {
-  font-family: "inter", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
 }
 
 /* =========================================================
@@ -55,9 +74,9 @@ h3 + p {
 /* ======== menu burger o Offcanvas ======== */
 .offcanvas-personalizado {
   background-color: #F2F0E4;
-  font-family: "Poppins", sans-serif;
   border-left: 1px solid #dcdcdc;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  width: 70% !important;
 }
 
 .offcanvas-personalizado .offcanvas-header {
@@ -66,14 +85,13 @@ h3 + p {
 }
 
 .icono-usuario {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 .enlace-login {
   color: #171D07;
   text-decoration: none;
-  font-weight: 500;
   border-bottom: 1px solid #171D07;
   transition: opacity 0.2s ease;
 }
@@ -88,16 +106,12 @@ h3 + p {
 }
 
 .menu-titulo {
-  font-weight: 600;
-  font-size: 1.1rem;
   border-bottom: 1px solid #171D07;
   display: inline-block;
   padding-bottom: 4px;
 }
 
 .menu-seccion {
-  font-weight: 600;
-  font-size: 1rem;
   border-bottom: 1px solid #171D07;
   display: inline-block;
   padding-bottom: 4px;
@@ -119,18 +133,12 @@ h3 + p {
   align-items: center;
   color: #171D07;
   text-decoration: none;
-  font-size: 16px;
   padding: 8px 0;
   transition: color 0.3s ease;
 }
 
 .menu-lista a:hover {
   color: #171D07;
-}
-
-.menu-lista span {
-  font-size: 18px;
-  font-weight: 400;
 }
 
 /* =========================================================
@@ -166,7 +174,6 @@ h3 + p {
 
 .promo-item {
   margin-right: 2rem;
-  font-weight: 600;
 }
 
 @keyframes marq {
@@ -181,10 +188,10 @@ h3 + p {
     TÍTULOS DE SECCIÓN
 ========================================================= */
 .titulo-seccion {
-  font-weight: 800;
-  margin-top: 1.5rem;
-  padding-left: 12px;
+  margin-top: 70px;
+  padding-left: 20px;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .titulo-seccion::before {
@@ -193,8 +200,10 @@ h3 + p {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 4px;
+  width: 6px;
   background: #171D07;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 /* =========================================================
@@ -233,13 +242,11 @@ h3 + p {
   padding: 12px 14px;
   background: #fff;
   border-radius: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.301);
   margin: 1px;
 }
 
 .paso-numero {
-  font-size: 3rem;
-  font-weight: 800;
   color: #C4E079;
 }
 
@@ -249,9 +256,16 @@ h3 + p {
 .btn-principal {
   background: #C4E079;
   color: #171D07;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   border-radius: 40px;
-  padding: 0.7rem 1.2rem;
+  padding: 12px 67px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.37);
+}
+
+.btn-compartir img {
+  height: 30px !important;
+  width: 30px !important;
 }
 
 /* =========================================================
@@ -259,35 +273,35 @@ h3 + p {
 ========================================================= */
 .info-franja {
   width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   background: #EF9AB9;
-  padding: 5rem;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   gap: 20rem;
   align-items: center;
   text-align: center;
-  font-weight: 600;
 }
 
-.info-franja i {
-  font-size: 1.8rem;
+.iconos-franja {
+  width: 60px !important;
+  height: 60px !important;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
   .info-franja {
     gap: 5rem;
-    padding: 5rem;
+    padding: auto 0px;
     text-align: center;
   }
 }
 /* =========================================================
     PRODUCTOS (CARDS)
 ========================================================= */
+.carousel {
+  margin-top: 20px;
+}
+
 .tarjeta-producto {
   background: #fff;
   border-radius: 22px;
@@ -334,7 +348,6 @@ h3 + p {
 .tarjeta-producto .btn-compartir {
   background: none;
   border: 0;
-  font-size: 1.3rem;
   color: #171D07;
   transition: color 0.3s ease;
 }
@@ -354,13 +367,17 @@ h3 + p {
 /* =========================================================
     COMUNIDAD
 ========================================================= */
+.intro-comunidad {
+  margin-bottom: 40px;
+}
+
 .tarjeta-comunidad {
   background: #fff;
   border-radius: 22px;
-  border: 2px solid #D1E0A9;
   overflow: hidden;
   max-width: 360px;
   margin: 0 auto;
+  padding: 40px 0px;
 }
 .tarjeta-comunidad img {
   width: 100%;
@@ -381,17 +398,22 @@ h3 + p {
   font-weight: 700;
   color: #171D07;
 }
+.tarjeta-comunidad .btn-compartir {
+  background: none;
+  border: 0;
+  color: #171D07;
+  transition: color 0.3s ease;
+}
 .tarjeta-comunidad .comunidad-usuario {
   display: flex;
-  align-items: center;
   gap: 10px;
   padding: 0 1.4rem;
   margin-bottom: 0.8rem;
 }
 .tarjeta-comunidad .comunidad-usuario img {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 10%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -427,9 +449,9 @@ h3 + p {
   margin-top: 0.2rem;
 }
 .tarjeta-comunidad .comentario img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -443,10 +465,13 @@ h3 + p {
 /* =========================================================
     FOOTER
 ========================================================= */
+footer {
+  margin-top: 100px;
+}
+
 .footer-movil {
   background-color: #D1E0A9;
   color: #171D07;
-  font-family: "Poppins", sans-serif;
   padding: 20px 18px 50px;
   display: flex;
   flex-direction: column;
@@ -464,7 +489,6 @@ h3 + p {
 .footer-enlaces a {
   text-decoration: none;
   color: #171D07;
-  font-size: 15px;
   display: block;
   padding-bottom: 6px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -486,7 +510,6 @@ h3 + p {
 .footer-faq a {
   text-decoration: none;
   color: #171D07;
-  font-size: 15px;
 }
 
 .faq-icono {
@@ -528,7 +551,6 @@ h3 + p {
   width: 100%;
   background-color: #c8dc7c;
   text-align: center;
-  font-size: 13px;
   padding: 8px 0;
   margin: 0;
 }
@@ -577,14 +599,11 @@ h3 + p {
 .nav-menu li a {
   text-decoration: none;
   color: #171D07;
-  font-weight: 500;
-  font-size: 1.1rem;
   position: relative;
   transition: color 0.3s ease;
 }
 
 .nav-menu li.active a {
-  font-weight: 700;
   border-bottom: 2px solid #171D07;
   padding-bottom: 3px;
 }
@@ -594,7 +613,7 @@ h3 + p {
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: #color-negro;
+  background-color: #171D07;
   left: 0;
   bottom: -3px;
   transition: width 0.3s ease;
@@ -619,7 +638,6 @@ h3 + p {
 
 .nav-search input {
   flex: 1;
-  font-size: 0.95rem;
   color: #171D07;
   background: transparent;
 }
@@ -649,12 +667,10 @@ h3 + p {
     max-width: 1200px;
   }
   .titulo-seccion {
-    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
   }
   main.container > p {
-    font-size: 1.1rem;
     text-align: center;
     max-width: 750px;
     margin: 0 auto 2rem;
@@ -734,7 +750,6 @@ h3 + p {
   }
   .paso-numero {
     color: #C4E079;
-    font-weight: 800;
   }
   .paso-tarjeta:nth-child(5) {
     grid-column: span 2;
@@ -742,7 +757,6 @@ h3 + p {
     width: 50%;
   }
   .btn-principal {
-    font-size: 1rem;
     padding: 0.8rem 2.4rem;
     transition: all 0.3s ease;
   }
@@ -758,20 +772,17 @@ h3 + p {
     align-items: flex-start;
     text-align: center;
     gap: 8rem;
-    font-weight: 700;
   }
   .info-franja div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1rem;
     transition: transform 0.3s ease;
   }
   .info-franja div:hover {
     transform: translateY(-6px);
   }
   .info-franja i {
-    font-size: 2.6rem;
     margin-bottom: 0.5rem;
   }
 }

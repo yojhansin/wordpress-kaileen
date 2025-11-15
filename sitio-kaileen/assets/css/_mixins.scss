@@ -53,7 +53,6 @@
 .btn-compartir {
   background: none;
   border: 0;
-  font-size: 1.3rem;
   color: $color-negro;
   transition: color 0.3s ease;
 }
@@ -66,11 +65,10 @@
 @mixin mixin-tarjeta-comunidad{
   background: $color-blanco;
   border-radius: 22px;
-  border: 2px solid $color-verde;
   overflow: hidden;
   max-width: 360px;
   margin: 0 auto;
-
+  padding: 40px 0px;
   img{
     width: 100%;
     height: auto;
@@ -89,20 +87,24 @@
   font-weight: 700;
   color: $color-negro;
 }
-
+.btn-compartir {
+  background: none;
+  border: 0;
+  color: $color-negro;
+  transition: color 0.3s ease;
+}
 
 .comunidad-usuario {
   display: flex;
-  align-items: center;
   gap: 10px;
   padding: 0 1.4rem;
   margin-bottom: 0.8rem;
 }
 
 .comunidad-usuario img {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 10%;
   object-fit: cover;
 }
 
@@ -143,9 +145,9 @@
 }
 
 .comentario img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
   object-fit: cover;
 }
 
@@ -159,10 +161,15 @@
 
 }
 
+
+// Cada vez que se use un boton, tambien agregarle la clase p-grande por el texto del boton
+
 @mixin mixin-boton-verde {
   background: $color-verde-chillon;
   color: $color-negro;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   border-radius: 40px;
-  padding: .7rem 1.2rem;
+  padding: 12px 67px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.37);
 }
