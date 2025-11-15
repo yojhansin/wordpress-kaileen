@@ -506,6 +506,7 @@ footer{
 ========================================================= */
 @media (min-width: 992px) {
 
+
   main.container {
     max-width: 1200px;
   }
@@ -522,6 +523,7 @@ footer{
     color: $color-negro;
   }
 
+  c
 
 #carouselPrendas {
   width: 90%;
@@ -637,6 +639,11 @@ footer{
     }
   }
 
+  .categorias-slider{
+    justify-content: center;
+    margin-top: 20px;
+  }
+
 
 
   .info-franja div {
@@ -661,6 +668,10 @@ footer{
   overflow-x: auto; // por si necesitas que deslice
   white-space: nowrap;
 
+  h3{
+      font-size: 16px !important;
+    }
+  z-index: 10;
   .cat-tabs {
     padding: 0;
     margin: 0;
@@ -669,30 +680,44 @@ footer{
     li { list-style: none; }
 
     .cat-btn {
+      h3{
+        margin-bottom: 0px;
+      }
       border: none;
       background: $color-blanco;
       padding: 12px 28px;
       font-size: 16px;
       font-weight: 500;
+      border-right: 1px solid $color-verde-chillon;
       cursor: pointer;
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
       border-bottom: 3px solid transparent;
     }
 
     .active {
-      background: #e89eb3; // tu rosado
-      border-bottom: 3px solid #e89eb3;
+      background: $color-rosado;  
+      box-shadow: inset 0 6px 8px -6px rgba(0, 0, 0, 0.473);
+      border-right: 0px;
+
     }
+  }
+}
+
+.cat-contenido {
+  background: $color-blanco;
+  padding: 25px 10px;
+
+  .cat-panel {
+    display: none;
+  }
+
+  .cat-panel.active {
+    display: block;
   }
 }
 
 .categorias-slider {
   overflow-x: auto;
-  white-space: nowrap; // 🔥 evita el salto de línea
-  padding-bottom: 4px; // para que no corte la sombra del botón
-
-  // OCULTA SCROLL EN IOS / CHROME
+  white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 
@@ -701,36 +726,13 @@ footer{
   }
 
   .cat-tabs {
-    display: inline-flex; // 🔥 necesario para deslizar
-    gap: 0;
-    padding: 0;
-    margin: 0;
-
+    display: inline-flex;
     li {
       list-style: none;
-      display: inline-block; // 🔥 fuerza fila continua
-    }
-
-    .cat-btn {
-      border: none;
-      background: $color-blanco;
-      padding: 12px 28px;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
-      border-bottom: 3px solid transparent;
-      white-space: nowrap; // 🔥 evita que el texto rompa el botón
-    }
-
-    .cat-btn.active {
-      background: #e89eb3;
-      border-color: #e89eb3;
+      display: inline-block;
     }
   }
 }
-
 
 
 /* ======== AJUSTES MÓVIL (PEQUEÑOS) ======== */

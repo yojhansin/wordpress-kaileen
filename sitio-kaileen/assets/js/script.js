@@ -1,17 +1,50 @@
-document.querySelectorAll(".cat-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
+const slider = document.querySelector(".categorias-slider");
 
-        // Quitar active de todos los botones
-        document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+let isDown = false;
+let startX;
+let scrollLeft;
 
-        // Activar este
-        btn.classList.add("active");
+slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
 
-        // Ocultar todos los paneles
-        document.querySelectorAll(".cat-panel").forEach(panel => panel.classList.remove("active"));
+slider.addEventListener("mouseleave", () => {
+    isDown = false;
+});
 
-        // Mostrar panel correspondiente
-        const contenido = document.querySelector(btn.dataset.target);
-        contenido.classList.add("active");
-    });
+slider.addEventListener("mouseup", () => {
+    isDown = false;
+});
+
+slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // velocidad
+    slider.scrollLeft = scrollLeft - walk;
+});
+
+// TOUCH (para móviles)
+slider.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].pageX;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("touchmove", (e) => {
+    const x = e.touches[0].pageX;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+});
+
+// cambio de estado de active
+
+const buttons = document.querySelectorAll(".cat-btn");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+    }); 
 });
