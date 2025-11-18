@@ -3,5 +3,13 @@
     { "nombre": "Amarillo", "imagen": "assets/img/amarillo.png", "valor": "0" },
     { "nombre": "Verde", "imagen": "assets/img/verde.png", "valor": "0" },
     { "nombre": "Azul", "imagen": "assets/img/azul.png", "valor": "0" }
+  ],
+  "talla": [
+    { "nombre": "S", "valor": "0" },
+    { "nombre": "M", "valor": "1000" },
+    { "nombre": "L", "valor": "2000" },
+    { "nombre": "XL", "valor": "3000" },
+    { "nombre": "XLL", "valor": "4000" }
+    
   ]
 }

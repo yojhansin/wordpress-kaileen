@@ -75,30 +75,35 @@ botones_producto.forEach((boton) => {
         if (botonInfo.classList.contains('active')) {
             infoProducto.innerHTML = '<p class="p-pequeno">Chaleco tejido a mano en lana de oveja, elaborado con punto espiga que aporta textura y calidez. Una prenda única, suave y naturalmente elegante.</p>';
         } else if (document.getElementById('boton-personalizacion-producto').classList.contains('active')) {
-            infoProducto.innerHTML =`                        <div class="col-5">
-                            <label for="Material">Material</label>
-                            <input class="w-100" name="Material" id="id-material" data-bs-toggle="modal" data-bs-target="#exampleModal"></input>
-                        </div>
-                        <div class="col-5">
-                            <label for="Talla">Talla</label>
-                            <input class="w-100" name="Talla" id="id-talla"></input>
-                        </div>
-                        <div class="col-2">
-                            <p class="p-mediano"></p>
-                        </div>`;
+
         }
     });
 });
 }
 
 
+// Variables de personalizacion
+const materiales = null;
 
-// modal formulario:
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+$.ajax({
+    url: 'assets/js/datos-personalizacion.json',
+    dataType: 'json',
+    success: function(data) {
+        mostrarDatosPersonalizacion();         
+    } 
+});
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
+ function mostrarDatosPersonalizacion() {
+    if (materiales) {    
+        infoProducto.innerHTML = `
+            <div class="col-5">
+            <label for="Material">Material</label>
+            <input class="w-100" name="Material" id="id-material" data-bs-toggle="modal" data-bs-target="#exampleModal"></input>
+            </div>
+        `;
+    }
+}   
 
 
+
+        
