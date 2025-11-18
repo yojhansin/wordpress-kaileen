@@ -50,16 +50,7 @@
   line-height: 1.4;
 }
 
-.btn-compartir {
-  background: none;
-  border: 0;
-  color: $color-negro;
-  transition: color 0.3s ease;
-}
 
-.btn-compartir:hover {
-  color: $color-negro;
-}
 }
 
 @mixin mixin-tarjeta-comunidad{
@@ -205,5 +196,24 @@
     &.active {
       background-color: #c8e37b; // tu verde
     }
+  }
+}
+
+@mixin mixin-boton-carrusel-producto{
+  button{
+    background-color: $color-rosado !important;
+    border-radius: 100% !important;
+    height: 20px !important;
+    width: 20px !important;
+  }
+  bottom: -70px !important; 
+  gap: 20px;
+
+}
+
+
+@mixin mixin-input-personalizacion{
+  input:hover{
+    cursor: pointer;
   }
 }
